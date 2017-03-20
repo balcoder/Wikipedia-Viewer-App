@@ -1,0 +1,19 @@
+body {
+    background-color: #1C9CB5;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+.container {
+  padding: 240px 120px;
+}
+#random_page a {
+  color: white;
+}
