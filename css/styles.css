@@ -17,3 +17,9 @@ p {
 #random_page a {
   color: white;
 }
+#results div{
+  margin-top:2%;
+  
+  color: white;
+  background-color: #65C2D3;
+}
