@@ -1,40 +1,15 @@
-// $(document).redy(function(){
-//   $("#search").click(function(){
-//     $.ajax({
-//       url:'http://en.wikipedia.org/w/api.php',
-//       data: {action:'query'}
-//     })
-//   })
-// })
-
-// $(document).ready(function(){
-//         $('#search').click(function() {
-//             $.ajax({
-//                 url: 'http://en.wikipedia.org/w/api.php',
-//                 data: { action: 'query', list: 'search', srsearch: $("input[name=searchTerm]").val(), format: 'json' },
-//                 dataType: 'jsonp',
-//                 success: processResult
-//             });
-//         });
-//     });
-//
-//   function processResult(apiResult){
-//      for (var i = 0; i < apiResult.query.search.length; i++){
-//           $('#display-result').append('<p>'+apiResult.query.search[i].title+'</p>');
-//      }
-//   }
-
 
 // Shorthand for $( document ).ready()
 $(function() {
   $("#search").on("click", function(){
+    // when the search box is clicked store the search term in a variable
     var searchTerm = $("#searchTerm").val();
+    // add the search term to the endpoit url and format as json
     var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + searchTerm + "&format=json&callback=?";
+    //use jquery ajax request
     $.ajax({
       url: url,
       type: 'GET',
-      contentType: "application/json; charset=utf-8",
-      async: false,
       dataType: 'json',
       success: function(data, status, jqXHR){
         $("#results").html();

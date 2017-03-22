@@ -14,12 +14,16 @@ p {
 .container {
   padding: 240px 120px;
 }
+.well-lg a {
+  color: white;
+  font-family: lobster;
+}
 #random_page a {
   color: white;
 }
 #results div{
   margin-top:2%;
-  
+
   color: white;
   background-color: #65C2D3;
 }
